@@ -22,11 +22,6 @@ class AppiumTests(unittest.TestCase):
         settings = self.driver.get_settings()
         self.assertIsNotNone(settings)
 
-    def test_simple_actions(self):
-        time.sleep(2)
-        el = self.driver.find_element_by_accessibility_id('Graphics')
-        el.click()
-
 
 if __name__ == "__main__":
     suite = unittest.TestLoader().loadTestsFromTestCase(AppiumTests)
